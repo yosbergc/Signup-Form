@@ -4,9 +4,17 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+main {
+    background-image: url(Assets/Background.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
 .login-container {
     width: 100%;
+    max-width: 400px;
     overflow: hidden;
+    background-color: white;
 }
 .photo-container {
     display: flex;
@@ -61,4 +69,25 @@ h2 {
     color: white;
     font-weight: 600;
     font-size: 1rem;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    main {
+        padding: 20px 0px;
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        min-height: 100vh;
+        align-items: center;
+    }
+    .login-container {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: 1fr 1fr;
+        max-width: 700px;
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 10px -2px rgba(145,145,145,1);
+        -moz-box-shadow: 5px 5px 10px -2px rgba(145,145,145,1);
+        box-shadow: 5px 5px 10px -2px rgba(145,145,145,1);
+    }
 }
